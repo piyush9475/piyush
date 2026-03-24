@@ -123,13 +123,9 @@ body {
 }
 
 /* Contact */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-}
+.section {
+    padding: 80px 10%;
+    text-align: center;
 
 form input, form textarea {
     margin: 10px 0;
