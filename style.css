@@ -284,12 +284,13 @@ body {
 }
 
 /* Contact */
-form {
+#contact {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    padding: 80px 10%;
 }
 
 form input, form textarea {
