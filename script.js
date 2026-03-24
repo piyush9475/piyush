@@ -1,10 +1,11 @@
+// Smooth scroll function for the 'Hire Me' button
 function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({
         behavior: "smooth"
     });
 }
 
-// Typing effect
+// Typing animation logic
 const textArray = ["Web Developer", "Digital Marketer", "Freelancer"];
 let index = 0;
 let charIndex = 0;
@@ -21,8 +22,7 @@ function typeEffect() {
 
 function eraseEffect() {
     if (charIndex > 0) {
-        document.getElementById("typing").innerHTML =
-            textArray[index].substring(0, charIndex - 1);
+        document.getElementById("typing").innerHTML = textArray[index].substring(0, charIndex - 1);
         charIndex--;
         setTimeout(eraseEffect, 50);
     } else {
@@ -31,4 +31,5 @@ function eraseEffect() {
     }
 }
 
+// Start the animation when the page loads
 document.addEventListener("DOMContentLoaded", typeEffect);
