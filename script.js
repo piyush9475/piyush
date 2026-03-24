@@ -1,18 +1,25 @@
-// Smooth scroll function for the 'Hire Me' button
+// Smooth scroll
 function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 }
 
-// Typing animation logic
+// Typing animation
 const textArray = ["Web Developer", "Digital Marketer", "Freelancer"];
 let index = 0;
 let charIndex = 0;
 
 function typeEffect() {
+    const typingElement = document.getElementById("typing");
+
+    if (!typingElement) return; // 🔥 prevents error
+
     if (charIndex < textArray[index].length) {
-        document.getElementById("typing").innerHTML += textArray[index].charAt(charIndex);
+        typingElement.innerHTML += textArray[index].charAt(charIndex);
         charIndex++;
         setTimeout(typeEffect, 100);
     } else {
@@ -21,8 +28,12 @@ function typeEffect() {
 }
 
 function eraseEffect() {
+    const typingElement = document.getElementById("typing");
+
+    if (!typingElement) return;
+
     if (charIndex > 0) {
-        document.getElementById("typing").innerHTML = textArray[index].substring(0, charIndex - 1);
+        typingElement.innerHTML = textArray[index].substring(0, charIndex - 1);
         charIndex--;
         setTimeout(eraseEffect, 50);
     } else {
@@ -30,9 +41,13 @@ function eraseEffect() {
         setTimeout(typeEffect, 200);
     }
 }
+
+// GitHub button
 function openGithub() {
     window.open("https://github.com/piyush9475", "_blank");
 }
 
-// Start the animation when the page loads
-document.addEventListener("DOMContentLoaded", typeEffect);
+// Start typing when page loads
+document.addEventListener("DOMContentLoaded", () => {
+    typeEffect();
+});
