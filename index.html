@@ -23,7 +23,7 @@
         <img src="profile.png" class="profile-pic" alt="Piyush Gupta Profile Picture">
         <h1>Hi, I'm <span>Piyush Gupta</span></h1>
         <h2><span id="typing"></span></h2>
-        <button onclick="scrollToSection('contact')">Hire Me</button>
+        <button onclick="scrollToSection('contact')">know more</button>
     </section>
 
     <section id="about" class="section">
@@ -61,15 +61,12 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <form onsubmit="event.preventDefault();">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+   <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: piyush@email.com</p>
+    <button onclick="openGithub()">My GitHub</button>
+</section>
+
 
     <script src="script.js"></script>
 </body>
