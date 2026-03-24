@@ -30,6 +30,9 @@ function eraseEffect() {
         setTimeout(typeEffect, 200);
     }
 }
+function openGithub() {
+    window.open("https://github.com/piyush9475", "_blank");
+}
 
 // Start the animation when the page loads
 document.addEventListener("DOMContentLoaded", typeEffect);
